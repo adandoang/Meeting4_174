@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meet4project/homepage.dart';
 
 class DetailOrderPage extends StatelessWidget{
   final String makanan;
@@ -24,9 +25,25 @@ class DetailOrderPage extends StatelessWidget{
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            
+            Text('Food Order: $makanan'),
+            Text('Drink Order: $minuman'),
+            Text('Food QTY Order: $jumlahMakanan'),
+            Text('Drink QTY Order: $jumlahMinuman'),
+            Text('Total Price: $totalHarga'),
+
+            const SizedBox(height: 20,),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                  (route) => false,
+                  );
+              }, 
+              child: Text('Finish Order'),
+              )
           ],
         ),),
-    )
+    );
   }
 }
