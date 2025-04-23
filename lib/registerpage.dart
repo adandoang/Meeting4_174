@@ -53,6 +53,6 @@ class _RegisterPageState extends State<RegisterPage> {
               child: Text('Sudah punya akun? Login sekarang'))
             ],
           ),)),
-    )
+    );
   }
 }
