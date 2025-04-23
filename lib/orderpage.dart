@@ -73,9 +73,28 @@ class _OrderPageState extends State<OrderPage> {
                 return null;
               },
             ),
+            ElevatedButton(
+              onPressed: () {
+                if (_formKey.currentState!.validate()) {
+                  calculateTotalPrice();
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: 
+                      (context) => DetailOrderPage(
+                        jumlahMakanan: JumlahMakananController.text,
+                        jumlahMinuman: JumlahMinumannController.text,
+                        makanan: makananController.text,
+                        minuman: minumanController.text,
+                        totalHarga: totalHarga,
+                      ),
+                    ),
+                  );
+                }
+              }, child: Text('Order Now'))
           ],
         ),
       ),
-    )
+    );
   }
 }
