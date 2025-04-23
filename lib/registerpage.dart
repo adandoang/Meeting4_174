@@ -1,0 +1,9 @@
+import 'package:flutter/material.dart';
+
+class Registerpage extends StatefulWidget {
+  const Registerpage({super.key});
+
+  @override
+  State<Registerpage> createState() => _RegisterPageState();
+}
+
