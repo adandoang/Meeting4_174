@@ -7,7 +7,7 @@ class Registerpage extends StatefulWidget {
   State<Registerpage> createState() => _RegisterPageState();
 }
 
-class _RegisterPageState extends State<RegisterPage> {
+class _RegisterPageState extends State<Registerpage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
@@ -48,11 +48,13 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
               ElevatedButton(onPressed: () {}, child: Text('Register')),
               TextButton(onPressed: () {
-                Navigator.pushNamed(context, '/login')
+                Navigator.pushNamed(context, '/login');
               }, 
               child: Text('Sudah punya akun? Login sekarang'))
             ],
-          ),)),
+          ),
+        )
+      ),
     );
   }
 }

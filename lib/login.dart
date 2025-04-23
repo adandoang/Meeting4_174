@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               TextButton(onPressed: () {
                 Navigator.push(context,
-                MaterialPageRoute(builder: (context)=> RegisterPage()),
+                MaterialPageRoute(builder: (context)=> Registerpage()),
                 );
               },
               child: Text('Belum punya akun? Daftar'),)
