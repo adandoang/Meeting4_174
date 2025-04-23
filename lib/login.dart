@@ -46,10 +46,27 @@ class _LoginPageState extends State<LoginPage> {
                   }
                   return null;
                 },
-              )
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  if(_formKey.currentState!.validate()) {
+                    Navigator.pushReplacement(
+                      context, 
+                      MaterialPageRoute(builder: (context) => const HomePage()),
+                    );
+                  }
+                },
+                child: Text('Login'),
+              ),
+              TextButton(onPressed: () {
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context)=> RegisterPage()),
+                );
+              },
+              child: Text('Belum punya akun? Daftar'),)
             ],
           ),
           )),
-    )
+    ); 
   }
 }
